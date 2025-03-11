@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS student (
+    id BIGINT PRIMARY KEY,
+    firstname VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    age INT NOT NULL CHECK (age > 0)
+);
