@@ -34,6 +34,7 @@ class StudentControllerTest {
                 .name("Stephanie")
                 .lastName("Alva")
                 .age(32)
+                .status("ACTIVE")
                 .build();
         Mockito.when(studentService.createStudent(any(StudentDto.class))).thenReturn(Mono.just(studentDto));
 
@@ -54,12 +55,14 @@ class StudentControllerTest {
                 .name("Stephanie")
                 .lastName("Alva")
                 .age(32)
+                .status("ACTIVE")
                 .build();
         StudentDto student2 = StudentDto.builder()
                 .id(2L)
                 .name("Christian")
                 .lastName("Alva")
                 .age(28)
+                .status("ACTIVE")
                 .build();
         Mockito.when(studentService.getStudents()).thenReturn(Flux.just(student1, student2));
 
